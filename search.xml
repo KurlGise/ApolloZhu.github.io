@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[我去，Mac 打不开了。怎么办？]]></title>
+    <url>%2F2018%2F04%2F26%2Fcombat-mac-startup-issues%2F</url>
+    <content type="text"><![CDATA[Mac 刚开机就黑，根本进不了系统？要简单的话那肯定是预约苹果的 Genius Bar，只要不换零件都是免费的。但在等待的期间，我觉得还可以先尝试抢救一下。 安全模式 开机时按住 shift 键进入安全模式，系统会尝试修复问题，不过这只适用于由于软件导致的问题。 恢复模式 开机时同时按住 command 和 r 键进入恢复模式。这个时候有 Time Machine 备份那肯定是最好的，直接恢复备份就行了。没有的话可以先尝试使用磁盘工具修复磁盘。 到了最后是在没有办法的时候，重装系统也是从这里。不过在此之前，请先尝试其他方式，不能放弃治疗。 单用户模式 开机时同时按住 command 和 s 键。你会看到黑底白字开始刷屏，不需要担心，等它停下就好了。接着我们就可以开始用 fsck 来尝试修复磁盘工具没法修复的问题。输入并回车 1fsck -fy 希望你看到的不是类似于 disk0s2: I/O error 一类的错误信息。但要是不凑巧的话，你还可以再碰碰运气。输入并回车： 1fsck_hfs FY /dev/disk0s2 但还是没修好 尝试下其他可以在开机时用的组合键，仍然不行的话就只有考虑把电脑里还没有备份的文件拷贝出来了。具体操作请参考 这篇文章。]]></content>
+      <categories>
+        <category>瞎捣鼓</category>
+      </categories>
+      <tags>
+        <tag>tips</tag>
+        <tag>macOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Scholar 眼里的 WWDC18]]></title>
+    <url>%2F2018%2F04%2F20%2Fwwdc18-preparation%2F</url>
+    <content type="text"><![CDATA[今年我又侥幸中了奖学金，还送了一年开发者账号免费，有点意外，但合情合理，我觉得还行。可惜仍没有校友/网友能同行，略有些失落。希望各位不要放弃，明年还有机会！ See you at WWDC18. Or, sometime in the future! 住宿（6/2 check in, 6/9 check out） 就和会场还是在 McEnery Convention Center 一样，免费住宿仍在 San Jose State University 的 Campus Village 2。房间是双人间，带窗，每人都还有个桌子。嗯，大概是这样的： 由 Vince14Genius 拍摄的去年的我 整栋楼带电梯，一楼有厨房/活动室，每层楼都有个办公区和休闲区。地理位置也不错：每天早上走路到会场要不了多久（官方说 15 分钟），校园里环境也还行，周围吃的也不少。真要说有什么不方便的话，那就是我们未成年人需要有主办方的人陪着，或者家长给个许可让在保持联系的情况下自由活动。 哦，对了，男同胞们请使用 Gender Neutral 的卫生间。 Scholarship Orientation（6/3） 类似于欢迎会的东西，领礼品（去年是 Apple TV）以及它们传授经验——如何才能最高效地利用 WWDC（去 Lab）。然后去年又讲了 Apple Pencil 的内部构造，同步数据传输和屏幕更新，以及为什么 Apple Watch 上会是 3 个圆环，而不是普通的计步器的原因。讲完了之后是合照，合照最后 Tim Cook 会出来，所以大家把照相设备准备好，就别背包了，想办法往中间蹭吧。 那么去年 Tim Cook 在出场之前，他都做了什么呢？有些 scholar 并没有出现在合照里，这又是为什么呢？媒体们呢，它们对于 scholar 们就没什么兴趣么？为什么我就是不写明呢？😏 交通 因为要考 SAT，所以得选下午的航班，因此来回程也就选择走 SJC 了，市内公交车也方便。最后照例列出航班： 航空公司 航班号 时间 中转机场 第二段航班号 时间 价格 American(AA) 5331 15:18-17:00 CLT 820 18:25-21:04 197.30 United(UA) 1851 12:45-18:36 IAH 2158 20:05-00:08 228.80+7.00 让我心里一寒的是，当我在 Google 输入 SJC IAD 之后出来的时间自然就成了六月九号。确实方便，但它是怎么知道的呢？ 未完待续 接下来的内容，请关注 WWDC 系列。去年作业没做完，今年我争取会议期间日更。]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>WWDC17</tag>
+        <tag>WWDC</tag>
+        <tag>WWDC18</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WWDC18 奖学金指北]]></title>
+    <url>%2F2018%2F03%2F16%2Fwwdc18-scholarships-info-cn%2F</url>
+    <content type="text"><![CDATA[English Version Here 之前忘了做自我介绍了。大家好，我是朱智语，去年通过 Karel the Robot 的 Playground 侥幸获得了 2017 年 WWDC 的奖学金。关于参加 WWDC 本身的介绍，特别是对于国内的朋友们，建议去看看 喵神的这篇文章。本文主要是分享下自己的经验，希望能抛砖引玉，避免其他对此感兴趣的在校学生或者 STEM 组织的成员错过这次机会。 这篇文章会有些长，请大家耐心、仔细地阅读。 简单的介绍 建议大家仔细阅读 官方的描述 以及 各种条款，但总的来说你需要用 英文 和 Swift 独立 编写一个有 创意 和 技术水平 的 Playground。你需要在北京时间 4 月 2 日早上 8 点之前上交，然后苹果就会在 4 月 21 日通知你是否被选中了！ 关于在校学生证明，这个官方的说法是当前的课表或者其他证明在读的文档，加上系主任或者校长的联系信息。STEM 组织我不是很熟悉，但官方的说法大概是成员信息加上组织者的联系信息。文档格式要求 PDF、PNG 或者 JPG，而且交中文的文档也是没问题的，所有语言苹果都认。 需要的软件 好消息是，你并不需要苹果的付费开发者账号。而且更优秀的是，如果你有幸得到今年的奖学金，你还能免费成为一年的苹果开发者计划成员。 软件的话，如果你有一台 Mac，你需要 从 Mac App Store（还记得 XcodeGhost 么？）下载 Xcode；如果你有一台 iPad, 则需要从 App Store 免费下载 Swift Playgrounds；如果你只有 Windows 电脑，那么可以尝试使用虚拟机等（百度 Swift 吧有介绍）。 学习 Swift 如果你有 iPad 的话，我强烈建议你尝试下 Swift Playgrounds 里的 “学习编程”，这样你就能在学习 Swift 的同时体验一下 Playground 与普通程序的不同之处。 不过还是有必要更系统的学习 Swift。如果看的懂英文的话，建议去 (i)Books 下载 《The Swift Programming Language》；看不懂英文也没问题？，这里有中文版。对于有编程基础的同学，只需阅读 A Swift Tour（Swift 概览）应该就可以掌握这门简单的编程语言了；从未接触过编程的话这个章节可以略读，带着问题阅读 Language Guide（Swift 指南）是个不错的选择。 当然，你完全没有必要读 Language Reference（语言参考）和 Revision History（版本修订历史）。 其他要学的 开发 2D 平面游戏的话可以使用 SpriteKit，3D 游戏的话有 SceneKit，WWDC17 也有讲在 Swift Playgrounds 里使用 SceneKit，但我觉得你应该已经略有了解，而且知道去哪里找 3D 模型。但其实 UIKit 本身已经能满足大部分的需求。这么短的时间肝 斯坦福的 CS193p 是来不及了，但官方还有 Start Developing iOS Apps (Swift)。 其实有时间的话，还应该去看看 视图控制器的工作原理，进一步了解 TableView，以及 iOS 程序开发。 Playground Playground 里的文档是支持 Markup 的，请避免使用 print，并改用这种方式 + CustomPlaygroundQuickLookable/CustomPlaygroundDisplayConvertible 引导用户。 Mac, Xcode, 和 Playground Xcode 里的 Playground 是在 2014 年的 WWDC 上介绍的, 并且在 2015 年引入了上面的注释格式来帮助你 编写更加美观的 Playground。 除了 Xcode 里的模版之外，官方还有一个 简单的案例 可供参考。如果你去翻 Swift 的博客 的话，那里也有些没法编译但还是很有趣的 Playground。 iPad 和 Swift Playgrounds 然后 2016 年 WWDC 就介绍了 Swift Playgrounds 这个 iPad 上的程序，当然 去年也有更新。相比之下，iPad 上的 Playground 有很多优势，比如 特殊的数据传递方法，cut scene（用 HTML 编写的“剧情画面”，引入接下来的内容），封面图和术语表等。详情可以参考 Playground Book Format Reference。 个人瞎分析 断网离线判定，不能要求账号，以及 3 分钟时限的规则还在，大家请多注意，但今年不知道为啥提到用苹果新科技这一点，只提了加上图片和音效……不过我估计还是会有不少 增强现实（你看今年宣传图）和 机器学习 类的 Playground。 不过说实话，即使可以在说明原因和正确使用 License 的情况下使用第三方开源库，但要交的仍然不能算是是普通的程序。这是你自己写的 Playground，作为可交互式的程序，我建议大家还是尽量体现出 Playground 的特点： 利用 Playground 的各种特性来引导用户，说明接下来要干什么，能达到什么目标 让用户通过编程来主动 学习新的内容 通过有趣的内容激发兴趣，鼓励用户更多地去了解，学习和参与编程 …… 去年的 Playground，虽然有不少被采用的并不具备以上特征，但并不能否定他们作为有价值的参考对象。代码的话大部分应该都在 GitHub 上这个项目里，某Tube 上也有个 播放列表（虽然不是很正确但还是希望大家想办法研究，包括 这个挺不错的 的投稿）。App Store 里的故事 大家也可以去瞧一瞧，看看过去获奖者的经历。 与此同时，我觉得这个和美国申请大学差不多，硬性条件 Playground 达到某种水平之后就完全靠 “Beyond WWDC” 这篇文章来分高下了。不多，500 词的英语写作，请大家感情丰富，有理有据地描述你如何分享你了解的编程知识以及用对 CS 的热情感化大众。建议大家不要无中生有，还是实事求是的好，不过同一件事情描述的角度不同，体现出来的效果自然是不一样的。大家可以把文章拿去让其他人读一读，参考下大家的意见多修改几遍比较好。 最后说几句 你问我难不难，那我肯定说难，不过也并不是说就届不到，实现不了。但也不能说就因为难就去抄，你看去年那个 2048 就被拒了吧。耍小聪明也是不行的，比如交两份啊，尝试黑进苹果什么的都是明令禁止的哦！ 如果你还有什么其他问题的话，我都会尽快回答，可能的话我也会更新文章的内容。 最后，祝大家能心想事成，也希望我们能相约六月的圣何塞。]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>WWDC</tag>
+        <tag>Swift</tag>
+        <tag>WWDC18</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WWDC18 Scholarships Information]]></title>
+    <url>%2F2018%2F03%2F15%2Fwwdc18-scholarships-info%2F</url>
+    <content type="text"><![CDATA[Wait, before we start, what is WWDC? I’ll add my description soon, but for now, check out the official website. Thank you all for being interested in Apple’s Worldwide Developer Conference and this scholarship opportunity. I hope all of us could go together, to learn, and have fun! I know this article is a little bit long, but please read through this carefully before you start. If you have any questions, just ask me through messenger, or in the comment area below. I’ll be constantly updating this, and the Chinese version is available here. Important Dates Date Event April 1, 20:00 EDT Submission Due April 20 Announce Status June 3-8 Orientation + WWDC! General Information Please read the description carefully, as well as the terms and conditions. In summary, you are required to write a Playground – an interactive program – that is creative and technically accomplished. Things to Get You do NOT need a paid Apple Developer Account. Do you know what’s better than that? You’ll get one year of Apple Developer membership if you win! If you have a Mac, download Xcode from Mac App Store, or if you have an iPad, download Swift Playgrounds from App Store, or if you have a Windows, get a virtual machine or whatever that works. Learn Swift If you have an iPad, I highly recommend you to go through one of those “Learn to Code” playgrounds to get a general idea about what a legit playground should be like, in addition to the Swift programming language itself. At the same time, everyone by now should have either an iOS device or a Mac, please open (i)Books and get The Swift Programming Language. You can always choose to read it online as well. Most of you are already familiar with Java, so reading just “A Swift Tour” should be adequate for you to understand this simple programming language. For those of you never learned programming before, just scan through that, and chapter 2 (Language Guide) will answer your questions. You do NOT need to read chapter 3 (Language Reference) and 4 (Revision History). General Stuff to Learn I Want to Write a 2D game You should learn SpriteKit. I Want to Write a 3D game You should learn SceneKit, but I hope you’ve already had some sense of how 3D works and where to get your 3D models. A bonus for you, Apple talked about using SceneKit in the iPad version of Swift Playgrounds. Otherwise Well, UIKit itself can do a lot of stuff. To get started, follow Start Developing iOS Apps (Swift). If you have time, you may also want to have a general understanding of how view controllers work, maybe more about table views, or even iOS Apps in general. More About Playground No matter what, you should read the Markup Formatting Reference. Your Playground will look a lot better with this in conjunction with CustomPlaygroundQuickLookable/CustomPlaygroundDisplayConvertible. Mac, Xcode, and Playground It was first introduced back in 2014, and later in 2015 you can use the format mentioned above to author rich Playgrounds to better instruct your users. Here is a simple Swift Playground Book for you to get started, and you can also find other interesting ones from the Swift Blog, although many of them would be outdated and require some changes for them to work. iPad and Swift Playgrounds This app is first introduced in 2016 and updated again last year. iPad Playground has many features that a normal Xcode Playground doesn’t have – Cut Scenes written in html (a great place to inform your user what’s this chapter about), cover images, vocab lists, etc. To fully utilize those features, please read the Playground Book Format Reference, and experiment with this sample that allows you to send messages to a Swift Playground live view and saving data to its key-value store. Analysis Remember that your playground will be judged offline, the program can NOT require an account for sign in, and they’ll only spend 3 minutes in judging it, so think about what you are going to do. Even without thinking I can tell you many people will be doing augmented reality and machine learning; you can not imagine how easy it is to implement those fancy but scary stuff with ARKit and Core ML. Well, try to be creative, add some graphics and audios, and incorporate some of Apple’s new technologies (even if they didn’t mention about that)… For the first time, you are allowed to use open source frameworks (providing that you included their licenses correctly and explained why). Nonetheless, what you are going to submit is not just a normal program. I think these are some reasons why Apple prefers Playground over normal apps, and maybe you want to address some of them: user will be directed about what to do and informed of what is expected it provide an interactive way for the users to learn things through programming it sparks users’ interest in coding and encourages further participation …(many more to add) Also, the “Beyond WWDC” essay is very important. You should explain, in 500 words, how you share your coding knowledge and enthusiasm for computer science with others. Spend some time on this and revise it several times. However, that doesn’t mean the playground itself isn’t important. There were many amazing playgrounds, such as this one here, but the quality of the other ones varies. So my suggestion is analysis why some of them got accepted and some got rejected, see if you can resonate with former winners, and just try your best. If you’d ever ask me if it’s hard, I’ll answer yes but DOABLE. Just make sure you don’t copy any others’ code – the 2048 playground from last year’s submissions was rejected for this reason. Everything is doable if you try. Mr. Lau Good luck. – Apollo (a.k.a Zhiyu Zhu, last year’s scholarship winner for submitting Karel the Robot Playground)]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>WWDC</tag>
+        <tag>English</tag>
+        <tag>Swift</tag>
+        <tag>WWDC18</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[制作 Telegram 表情包]]></title>
+    <url>%2F2018%2F02%2F25%2Ftelegram-sticker-border%2F</url>
+    <content type="text"><![CDATA[在制作 百地 たまて 的表情包的时候，才知道 telegram 和微信一样对表情包有要求，512 px 加白边。纵使别人连 psd 文件都给你们了，你们还是照样不遵守规范……所以让我们来看看选中 Layer 后要加些啥 fx： Outer Glow Stucture Blend Mode: Screen Opacity: 100% Noise: 0% Color: #fcfcfc Elements Technique: Softer Spread: 89% Size: 5px Quality Contour: Linear Anti-aliased: 自行判断 Range: 50% Jitter: 0% Drop Shadow Layer knocks Out Drop Shadow: YES Stucture Blend Mode: Multiply Color: #000000 Opacity: 25% Angle: 120 Use Global Light: YES Distance: 5px Spread: 0% Size: 10px Quality Contour: Linear Anti-aliased: 自行判断 Noise: 0% 你学会了吗？]]></content>
+      <categories>
+        <category>瞎捣鼓</category>
+      </categories>
+      <tags>
+        <tag>tips</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[一团糟的回锅肉丁！]]></title>
+    <url>%2F2018%2F02%2F24%2Fhash%2F</url>
+    <content type="text"><![CDATA[不，不，我们要讨论的是 hash，哈希在编程中的运用，毕竟所有的 Java 对象都是 Equatable &amp; Hashable 的，而且和 Swift 一样没带上 Comparable 一起玩。 查找表和哈希表 为了 O(1)O(1)O(1) 搜索而存在的数据类型，无序遍历。Look up table 的数组为了放下所有的值，会浪费很多的空间，而且是各占一个位置。而 hash table 则是把 hashcode 通过一个 hash function 转换为合法的数组索引，更节省空间。不过这也给哈希表带来了最大的问题：collision。 解决冲突（碰撞） 两个不“相等”的对象被安排到同一个索引的时候，我们就需要考虑如何 resolve collision。 开放定址 Open addressing 就是可以占别人的位置，其中一种占的方式是线性的 linear probing，也就是当前的没了就占下一个空位。但这种方式是有弊端的。一是占的越多，就会产生 filled sequence，一连串都被占了。这种 cluster 就会导致发生冲突的可能性变得更高，于是最后就喜闻乐见地变成 O(n)O(n)O(n) 了。二是得用 soft delete，删除的时候要留个占位的，否则搜索就全乱了，因此占位的对象太多的时候也需要 rehash。 还有一种 quadratic probing，没了就占往后数 i2i^2i2 的空位。这种方式对 load factor 要求很高，负载不能超过 50%，否则很可能会找不到空位。那就扩容量呗！先不说会降低遍历效率，关键在于 rehash 的时候对数组长度还有要求……目前网络上的描述大多不完善（准确），所以现在正在研究中，要是捣鼓得出结果的话之后会单独讨论。 聚集 这类方法是把每个空位视为一个 bucket，也就是存放多个值的集合。用二维数组实现会浪费太多空间，不推荐。ArrayList 和 LinkedList 会稍微好些，即使负载大于 100% 的时候性能也不会掉太多。但极端情况下还是会导致查找变成 O(n)O(n)O(n)，所以如果可以比较对象的话，用 BST 能保证 O(logn)O(log n)O(logn) 的搜索。 Java 里哈希值的运用 Java 里的 TreeSet 比较坑，因为内部是基于 TreeMap 的二叉搜索树实现的，所以要不得有个 Comparator，要不类型本身得是 Comparable，但是构造器并没有对泛型进行限制，所以不满足条件会直接抛 ClassCastException。 相比之下 HashSet 里的 HashMap 是基于 hashCode() 然后 equals(Object) 进行的判断。记住别只是重载个 equals(this.class)，因为对泛型的类型擦除会导致运行时直接去找 equals(Object)。 顺便提下 Hashtable，和 HashMap 的区别就是 synchornized，不接受 null 值，继承了被抛弃的 Dictionary，总结一下就是没有被钦定。 潜规则 所以为了正常使用这些基于哈希值的数据类型，除了别搞幺蛾子之外，存在着 hashcode contract： compareTo 返回 0 时 equals 返回 true，反之亦然 同一个对象在状态未变的情况下，该次程序运行期间哈希值相同 同时 @Override equals 和 hashCode，使“相同”的对象具有相同的哈希值 相同的哈希值并不代表两个对象“相等” 顺便说一句，《算法图解》（Grokking Algorithms）并没有想象中的那么实用（有趣且全面），不是很推荐。但不论怎么说，作者 的艺术作品还是可以的。]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CENTER 情人节活动]]></title>
+    <url>%2F2018%2F02%2F20%2Fcenter-valentines%2F</url>
+    <content type="text"><![CDATA[猜猜答案是啥？ 当听到让带 “Valentines” 的时候，我是一脸懵逼的。仔细问了才知道外国小朋友好像在小学的时候，情人节会准备些像这样的小东西送给班上 每 一个人…… 上面这个是手写的，但据老师说超市都在打折销售小卡片什么的（毕竟情人节已经过了）。可是我只身一人在家，又没有交通工具…… 该准备尽快考驾照了]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>culture</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Drama]]></title>
+    <url>%2F2018%2F02%2F16%2Fdrama%2F</url>
+    <content type="text"><![CDATA[原来学钢琴的时候，我有一支录音笔。 它曾经装满了我爸的美国乡村音乐，不过自从我开始学琴之后，就给我用来录制老师弹奏的片段，方便我回家练习。一切本应如此平常。但应该是在六年级的时候吧，一天全体男生被留下来开班会反省，理由是班上几个调皮的同志摸了女生的屁股。这事和我这种“乖孩子”没啥关系，也不存在吃醋或者戴绿帽什么的，但当老师说女生很纯洁的时候，我们自然是忿忿不平，约着准备证明这是错误的。过了几天，我带上了我的录音笔，与其说是准备把同学们平时的谈话录下来当作呈堂证供，不如说是拿着好玩，顺便听下曲子而已。然后班主任就找到了我，怀疑我是准备把老师告上教育局…… Excuse me? 还有这种操作？的确是我考虑不周，但还是觉得委屈，哭了一场，但也没给同学提起。 尽管原来经常有人夸我成熟，我倒反而觉得我是单纯。一味追求真实和真理，不明白这些勾心斗角；情商为零，不遵守也不了解潜规则；相信可以不争，甚至避免当权。可以说是个很随和的人了，当然，锅从天上来就另外考虑了。 就比如今天收到封社团指导老师的邮件，说很紧急，让我尽快过去。我课也没上了，请了个假马上飞奔过去。结果是因为星期三的时候借用了另一个数学老师的教室，那老师说我们在维持秩序的时候，毫无风度，针对她和向她请教的学生，让她们闭嘴。哇哦，好大的锅，关键是这诉苦的邮件还顺便抄送了另外两个老师，说我们不仅没有谢谢她给我们提供了教室，还这样对待她，心力憔悴，重任在身 的她只好抛下我们。可以理解，因为是这两位老师最后想办法找到了个教室安置我们社团，但同时也意味着不妥善处理这件事情就会导致这两位虽然和我关系还不错的老师之后不再帮助我们。我不敢想象星期四吃午饭的时候这群数学老师到底交谈了什么，也想不清楚该怎么为这件事道歉。毕竟这里再怎么说也是美国，一味道歉只会让事情更糟糕。 仔细回想了下，我不是最早到的，但我到的时候，那老师其实不在；我收拾完教室之后是走的最晚的，但如上面所说，那老师早已经离开了，以至于我以为这就是间给我们用的空教室，毕竟我一开始是拜托隔壁的老师，我走的最后也请隔壁的老师来锁了门，还感谢了他（thank you 肯定说了不下三遍）。我作为一个自认为和没听过「爱」的 Violet Evergarden 差不多的（木头）人，自认为算是仁至义尽了。要是这位老师想要礼物的话，我更希望能直接告诉我们，我们不仅不会拒绝，说不定再加上当天还是情人节，额外的都有。 估计是责任大于委屈，我竟然没哭，一整天就在排查，找人问情况，调查到底发生了什么。 我们社团一直属于人多又有活力的那种，要开始 lecture 的时候不得不吼两句，但我不觉得任何社员，甚至我们学校任何的学生真有如此胆大包天，敢去明目张胆地 diss 老师。到最后也觉得是那个老师累坏了，草木皆兵。虽说可以理解，我们社员的素质确实能够提高，我们引导的方法确实能够更明确；但这锅，绝对背不得。 吃午饭的时候和另一个同学聊起了这件事，他说同学们肯定想都没想过去 shush 任何的老师，同时对 CS Club 被卷入这种 “drama” 深表同情，感觉他话是说到我心坎里去了。像我们这种喜欢和代码打交道的，估计都是因为 code 都是说一就是一，不需要什么阿谀奉承，也没有什么尔虞我诈吧。 也好，现在我也是 “very upset [sic] the way they treated me, …, but I had so much work to do and after what they did, I have to leave”，弹起了积灰的钢琴，追寻一丝平静。 这事情肯定该怎么处理还是怎么处理，该送礼还是要送礼，当然前提是我们不背锅。 唉，不管是春晚，还是 bilibili 的拜年祭，怕是都没机会看了。]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>management</tag>
+        <tag>culture</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Paradox, 0x00]]></title>
+    <url>%2F2018%2F02%2F01%2Fmeaning-of-life%2F</url>
+    <content type="text"><![CDATA[The meaning of life is to find the meaning of life. error: variable used within its own initial value]]></content>
+      <categories>
+        <category>瞎捣鼓</category>
+      </categories>
+      <tags>
+        <tag>English</tag>
+        <tag>philosophy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[感想之后再补]]></title>
+    <url>%2F2018%2F01%2F30%2Fap-lang-quarter-3%2F</url>
+    <content type="text"><![CDATA[Any real change implies the breakup of the world as one has always known it, the loss of all that gave one an identity, the end of safety. And at such a moment, unable to see and not daring to imagine what the future will now bring forth, one clings to what one knew, or thought one knew; to what one possessed or dreamed that one possessed. Yet, it is only when a man is able, without bitterness or self-pity, to surrender a dream he has long cherished or a privilege he has long possessed that he is set free—he has set himself free—for higher dreams, for greater privileges. James Baldwin“Faulkner and Desegregation”Nobody Knows My Name]]></content>
+      <categories>
+        <category>摘录</category>
+      </categories>
+      <tags>
+        <tag>English</tag>
+        <tag>literature</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[这怎么可能是真的？]]></title>
+    <url>%2F2018%2F01%2F21%2Fswift-a123-equalilty%2F</url>
+    <content type="text"><![CDATA[123if a == 1 &amp;&amp; a == 2 &amp;&amp; a == 3 &#123; print("All three match!")&#125; 这本来是个 JavaScript 的面试题，但这并不能阻止我们在推特上研究 Swift 里的解法。 All three match – how many ways can you think of to make this true in Swift? You’ll learn by trying 👍 pic.twitter.com/FTRh2uKhTb&mdash; Paul Hudson (@twostraws) 2018年1月20日 本文不讨论 Unicode 或藏代码这些方法。 计算型变量 这可能是大家最容易想到的，只要每次自加一就好了： 12345var _a = 0var a: Int &#123; _a += 1 return _a&#125; 重载运算符 参数名并不重要，所以本文采用统一的 lhs 和 rhs 当然除了改变量之外，改运算符也是一种思路： 123456var a = 1func ==(lhs: inout Int, rhs: Int) -&gt; Bool &#123; // 不加 `inout` 那 `lhs` 就改为 `a` defer &#123; lhs += 1 &#125; // `a = 0` 就不用 `defer` return !(lhs != rhs) // 避免造成递归&#125; 然后就出现了更简单粗暴的： 123func &amp;&amp;(lhs: Bool, rhs: Bool) -&gt; Bool &#123; return true &#125;// 如果 T 已经是 Equatable，那必须得替换成更准确的类型func ==&lt;T&gt;(lhs: T, rhs: Int) -&gt; Bool &#123; return true &#125; 遵循新协议 这个有点反着来的感觉，确实不容易想到。我们可以让某种 Equatable 遵循 ExpressibleByIntegerLiteral 协议，这样 1、2、3 就能被视为和 a 是同一个类型的，我们也就可以欺骗已经存在的 ==，让他们被视为相等的： 123456enum Foo: ExpressibleByIntegerLiteral &#123; case bar public init(integerLiteral value: Int) &#123; self = .bar &#125;&#125; 或者我这个有点重现 C 语系感觉的： 12345extension Bool: ExpressibleByIntegerLiteral &#123; public init(integerLiteral value: Int) &#123; self = value != 0 &#125;&#125; 楼主中途又加了个限制，要求代码同时符合这个运行结果： 12345if b == 1 &amp;&amp; b == 2 &amp;&amp; b == 3 &#123; print("All three match!") // 不执行这一条&#125; else &#123; print("All three don't match!")&#125; 但这只要 a 和 b 不是同一个类型/实现就可以了，没啥影响。而且我们还可以用类似于这样的方法来掩人耳目： 12let a: Bool = 1, b = 1// 上面的 `b` 还是 `Int` 如果你还有其他的姿势，不妨在下面，到 bilibili，或者去 推特 上回复。]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[令人脸扁的 macOS 程序图标替换]]></title>
+    <url>%2F2017%2F12%2F07%2Fmac-app-icon%2F</url>
+    <content type="text"><![CDATA[毕竟是亲儿子，用 Swift 实现运行时替换程序图标，是舒服得脸扁；不过用 Java 实现，那可是恼火得脸扁。 如果你用 Swift 用 Swift 在 macOS 上把图标替换为另一张图片： 1NSApp.applicationIconImage = #imageLiteral(resourceName: "图标的名字.png") 如果要设置为 NSView 的话，可以用下面的方法： 1234// 如果有需要可以获得图标的大小：let size = NSApp.dockTile.sizeNSApp.dockTile.contentView = &lt;#T##作为图标的 NSView##NSView#&gt;NSApp.dockTile.display() &lt;##&gt; 是 Xcode 使用的占位符的格式，大家可以尝试下。 如果你用 Java 你可能会说为什么不用 JFrame::setIconImage 或者 add 到 JavaFX 的 Stage.getIcons() 里——naïve。虽然他们不考虑 Mac，但我们为他们着想，在 Java 彻底提出解决方案之前，为了兼容其他平台，我们使用反射实现： 1234567try &#123; Class NSApplication = Class.forName("com.apple.eawt.Application"); Method sharedApplication = NSApplication.getMethod("getApplication"); Object shared = sharedApplication.invoke(NSApplication); Method setApplicationIconImage = NSApplication.getMethod("setDockIconImage", java.awt.Image.class); setApplicationIconImage.invoke(shared, /*作为图标的 Image*/);&#125; catch (Throwable ignored) &#123; &#125; 虽然错的明明是他们，但上面提到的方法在 Java 9 （没事干不要用 Java 9）下还是会被警告的，因为之后会有解决方案。顺便提一句，虽然因为上面的例子肯定要 try-catch 所以没有必要，但可以这样判断是 Mac 系统： 1System.getProperty("os.name").toLowerCase().contains("mac") 有哪里写错了记得让我同时更新 B 站 cv99301]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode - 2. Add Two Numbers]]></title>
+    <url>%2F2017%2F11%2F01%2Fleetcode-add-two-numbers%2F</url>
+    <content type="text"><![CDATA[本来说 LeetCode 准备全用 Swift，（这道题正常做法 Swift 也行，详见正确答案），但是想偷懒，这个时候只有靠 python 这种适合大数据的才行，毕竟这道题的本质是把两个数相加。 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list. You may assume the two numbers do not contain any leading zero, except the number 0 itself. Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 实际上这就是计算 342+465=807342 + 465 = 807342+465=807，每个数字分别是倒着写的。所以先 toInt 递归把链表转换成整数，然后 toListNode 把整数转回链表。但这种不负责任的写法 Swift 会溢出，于是换了 python。 1234567891011toInt = lambda l: l and toInt(l.next) * 10 + l.val or 0def toListNode(i): base = None for c in str(i): new = ListNode(int(c)) new.next = base base = new return baseclass Solution: def addTwoNumbers(self, l1, l2): return toListNode(toInt(l1)+toInt(l2)) toListNode 里转字符串完全是不得已而为。我一开始（也是 StefanPochmann）用的方法是这样的： 12345def toListNode(i): this = ListNode(i % 10) if n &gt; 9: this.next = toListNode(i / 10) return this 有些蹊跷的是，在数字够大的时候，会和正确结果有些出入。原因不明，难不成是除法带来的浮点误差？]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>algorithm</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[在 Windows 10 上跑 Swift]]></title>
+    <url>%2F2017%2F09%2F22%2Fswift-on-win-10%2F</url>
+    <content type="text"><![CDATA[抛开大多数连 Swift 是什么都没有听说过的人，知道 Swift 的人大多都觉得它只能用于 iOS 开发，其实不然。Swift 在 15 年底就支持了 Windows 和 Android，不过因为编译过程过于复杂，所以没有掀起太大的涟漪；反倒是 2017 年夏天的时候微软宣布把 Ubuntu 搬进 Windows 让 Swift 有了大显身手的机会。 配置 Windows Subsystem for Linux (WSL) 是这一切的基础，所以我们需要在 Windows 10 上安装 Ubuntu，然后用 bash 安装 Swift 编译器。可惜的是 WSL 并不支持 Swift 的交互式解释器（REPL），尽管如此缺依然要求你有 版本 1607 及以上 的 64 位 Windows 10（可以在 设置 &gt; 系统 &gt; 关于 中查看）。 步骤 我们先要启用适用于 Linux 的 Windows 子系统。以 管理员 身份运行 Powershell，输入以下内容。完成后按 Y 重启电脑。 1Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux 或者可以在 控制面板 &gt; 程序 &gt; 启用或关闭 Windows 功能 中，勾选“适用于 Linux 的 Windows 子系统(Beta)”，然后点确定。根据提示重启。 重启以后，启用开发人员模式。以 管理员 身份运行 Powershell，输入以下内容： 1reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /t REG_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1" 或者可以在 设置 &gt; 更新和安全 &gt; 针对开发人员 中，选择 “开发人员模式” 最后安装 Ubuntu，建议用 非管理员 模式运行 Powershell，输入以下内容。完成安装之后，输入 bash 进入 Ubuntu 系统。 1lxrun /install /y 以上方法是懒人配置，如果想自定义，请输入 bash，然后根据提示配置。 最后安装 Swift。为了简化步骤，借鉴了喵神借鉴 Vapor 来的代码，稍微修改后做了个自动安装的脚本。输入： 1eval "$(curl -sL https://raw.githubusercontent.com/ApolloZhu/script/master/swift/install/4)" 看到“✅ Done”，下一行写着 Swift 版本号的话，那就大功告成了！如果想自定义安装步骤，可以把上面的 bash 脚本稍微改改。 接下来呢？ 因为不支持 REPL，所以只有写好了程序再编译。怎么才能写程序？ 写程序是不可能的，这辈子都不可能写程序的 因为 Ubuntu 是 Windows 的子系统，所以文件是两边都可以访问的，也就是你可以在 Windows 上把程序写好了，再在 Ubuntu 里运行。不过没了 Xcode，你们用什么编辑器就都随意吧。 玩腻了要卸载 Ubuntu？执行命令 1lxrun /uninstall /full /y 参考 Swift 支持的平台 WSL 安装 暂不支持 Swift 交互式解释器 本文在 B 站 cv18127]]></content>
+      <categories>
+        <category>瞎捣鼓</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Explosive AP Chemistry Survey]]></title>
+    <url>%2F2017%2F08%2F30%2Fap-chem-survey%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>English</tag>
+        <tag>anime</tag>
+        <tag>chemistry</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[A 1000 Times]]></title>
+    <url>%2F2017%2F08%2F30%2Fa-1000-times%2F</url>
+    <content type="text"><![CDATA[AP Language &amp; Composition 第一节课要求赏析歌词，感觉就像看到了现在/未来的自己。 I had a dream that you were mine I’ve had that dream a thousand times]]></content>
+      <categories>
+        <category>摘录</category>
+      </categories>
+      <tags>
+        <tag>music</tag>
+        <tag>literature</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[到底放引号里面还是外面？]]></title>
+    <url>%2F2017%2F08%2F28%2Fpunctuated-quote%2F</url>
+    <content type="text"><![CDATA[暑假上 SAT 的时候老师没有想明白分号到底是放引号内还是外，今天算是找到了一个科学的解释： 情景 美式标准 引用内容 双引号 在引用内容内引用 单引号 逗号和句号 总是在引号内 其他标点（冒号、分号、问号等） 如为引用内容则放引号内，否则一律放引号外 以上节选翻译自：APA Style Blog: Punctuating Around Quotation Marks]]></content>
+      <categories>
+        <category>摘录</category>
+      </categories>
+      <tags>
+        <tag>tips</tag>
+        <tag>literature</tag>
+        <tag>translation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Advanced CS Student Survey]]></title>
+    <url>%2F2017%2F08%2F25%2Fapcsab-survey%2F</url>
+    <content type="text"><![CDATA[Dear Advanced APCS students, In order to provide an excellent learning environment for you in this coming school year, I would like you to help me answer the following questions, be as specific and detailed as possible, so that I can do a better job in terms of fulfilling your needs. Thank you for your time. Mr. Lau Why did you sign up to take this course? Be specific. Just interested; to learn. What do you expect to learn from this course? If you know nothing about the curriculum, just brainstorm by yourself and tell me something that you want to learn. Fully understand Big-O notation. Basic algorithms and data structures, and when/why to choose one over another. What did you do over the summer that is related to computing (summer camp, internship, self-learning, taking an online course, teaching other people)? Please tell me what you learned through this experience. Be as specific as possible. Mainly translating Stanford’s Developing iOS 10 Apps with Swift; read The Swift Programming Language (Beta). Wrote an app to post the translated subtitle to online video platform, practiced using recursion, HTTP request, async background queue, and Continuous Integration. Wrote a raffle app in Kotlin (Google’s new programming language for Android, basically Java), refreshed memory of Swing, learned a little about JavaFX. Read part of the K&amp;R (The C Programming Language). Watched a short series of basic tutorials about HTML &amp; CSS. Watched How GitHub uses GitHub series. Learned several git commands. Please check those topics that you know something about. Tell me something about each if possible. [x] Linked List: Holding a pointer to the previous/next Element. Easier to add/remove, harder to find index. [x] Recursion: Using itself in the definition of itself. Throws StackOverFlowException. [ ] Big-O notation [x] Stack: First (push) In, Last (pop) Out. How I deal with recursive methods. [x] Queue: FIFO. [x] Priority Queue: Queue, elements ordered by priority. [x] Hash Table: AKA Dictionary&lt;K: AnyHashable, V: AnyObject&gt;, mapping Key to Value. [ ] Heap [x] Tree: Nodes. May traverse in Pre/In/Post order (if should visit root first). [x] Binary Search Tree: Each node has max 2 child, with left &lt; this &lt; right, and each child is BST [x] Graph: (Un)directed edges connecting vertices. [ ] Depth first search [ ] Breadth first search [ ] Quicksort (and basically all other sorting algorithms) Your concerns about this course. Be specific and honest. Write as much as necessary! Big-O notation sounds/is quite confusing, it took me a long time to understand why merge sort is O(nlogn).]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>English</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[「貴方のことが好きです。私と付き合ってください！」]]></title>
+    <url>%2F2017%2F08%2F24%2Fbilibili-kiminonawa%2F</url>
+    <content type="text"><![CDATA[求点赞！请在登陆 B 站账号的浏览器打开：https://www.bilibili.com/activity/likes/like/10156?oid=2127098，谢谢！ 话说这次 Bilibili 蹭《你的名字。》这个热点的 活动 好像慢了一拍吧…… 标题大意为“我很喜欢你，请和我交往吧！”，摘自： 《日本有意思》作者：Nina Rongwww.zhihu.com电子书]]></content>
+      <categories>
+        <category>摘录</category>
+      </categories>
+      <tags>
+        <tag>anime</tag>
+        <tag>bilibili</tag>
+        <tag>zhihu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[GitHub's Swift Style Guide]]></title>
+    <url>%2F2017%2F08%2F23%2Fgithub-swift-style-guide-irony%2F</url>
+    <content type="text"><![CDATA[中文版本 When I was cleaning up my GitHub repos and stars, I found GitHub’s style guide for Swift, and I find this 2nd most starred style guide quite amusing. Despite the fact that Xcode defaults to using 4 spaces for indentation (and we can clearly see the impact by checking tabs-or-spaces), the style guide suggests using tabs instead. I’m totally fine with that, but I can easily tell there are some disagreements among the contributors: 1234567var myGreatProperty: Int &#123; return 4&#125;subscript(index: Int) -&gt; T &#123; return objects[index]&#125; But there’s more. For now (2017 Auguest 23), there are three Swift repos under GitHub’s main account – one source, two forks. Well, then let’s focus on SoftU2F, the ONLY Swift repository GitHub actually owns. Isn’t it natural for me to expect this repo to follow GitHub’s own style guide? But ironically, even SoftU2F is NOT doing that! In conclusion, seems that GitHub is not interested in styling their Swift code, and thus the GitHub community (or at least the 4k stargazers) has no actual intention to follow GitHub’s style guide, too.]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>English</tag>
+        <tag>Swift</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CUL8TR, Ben]]></title>
+    <url>%2F2017%2F08%2F21%2Fcul8tr-ben%2F</url>
+    <content type="text"><![CDATA[摩尔门教的同学 Ben Cullen 高中毕业了，需要去服务两年再去考上的大学，所以昨天下午在家举行 Farewell Open House。 虽然是同校，但我是在 HackTJ 上才遇到他的。当时我们组一直在纠结做什么，最后定下点子之后也是在摸鱼，略有些无聊，我一个人出去溜达一圈。转悠的时候发现社长所在的组用的是 Swift，于是我就这么中途“叛变”了。当时时间紧，做的 HackYourHealth 只能说是差点得奖（评奖前又把我们叫过去审了一遍），不过借此机会认识了 Ben，之后偶尔有些交流。 因为各种原因这是我第一次去同学聚会，很多规矩不懂。大家就吃吃喝喝，聚在一起闲聊，但是要穿正装？幸好我平时穿衣服都还比较正式，不知道蒙混过去没有（机智的我也习惯性地把运动鞋脱了）。 不过收获也不少。了解到 Ben 的父亲在 Washington Post 主要负责手机客户端，但是偏好 Python，偶尔应公司要求用 Go。还了解到 Ben 暑假在某游戏公司带薪实习，就顺便把我介绍给了来送行的老板（高中找 intern 真的是很头疼的事情，这还真帮我省了不少功夫）。 虽然 Ben 收到了我给他的 WWDC 胸针，可是他的 Macbook Air 还是被同学打倒的果汁给续了…我也就不追究他妹妹“趁火打劫”走另一个胸针的事了吧。]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>culture</tag>
+        <tag>religion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CS193P 第五集神翻译]]></title>
+    <url>%2F2017%2F08%2F20%2Fcs193p-ep5-funny-translations%2F</url>
+    <content type="text"><![CDATA[翻译斯坦福 CS193P (Developing iOS 10 Apps with Swift) 的时候脑子一热留了个神翻译：第五集十三分五十秒 123456...27400:13:50,130 --&gt; 00:13:51,862Bingo!赢了呢！（千岁梗）&lt;##&gt;... 差点忘了 第五集十六分二十七秒 123456...33600:16:27,853 --&gt; 00:16:30,554One is you have to ask a UIView, please start第一步是告诉 UIView 请开始你的表演&lt;##&gt;...]]></content>
+      <categories>
+        <category>瞎捣鼓</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+        <tag>anime</tag>
+        <tag>translation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[那些值得一看的 WWDC 视频（持续更新）]]></title>
+    <url>%2F2017%2F08%2F16%2Fwwdc-videos-worth-watching%2F</url>
+    <content type="text"><![CDATA[为了避免违反苹果的条款，把所有搬运的视频自己删了（之前已经删了一批），免得被苹果工作人员催着删（比如某人录制的 17 年第二天早上奥巴马夫人演讲）。 那就通过此文分享那些有趣/有用的 WWDC 视频吧。 WWDC 2016 国际化最佳实践 看点：开始小哥打结还以为太紧张说不出话来，结果… 视频：Session 201: Internationalization Best Practices 当时是我在为了一个 比赛的 App 狂补本地化/国际化，把所有和本地化有关的视频都翻出来了。可以看出苹果一直重视中国市场，工具也越来越好用 (不明白 Route 85 为什么讲这部分的第一期还在推荐用 genstrings)，所以看到这个的时候内心还是很感动的。特别是名字的识别部分，从 ABRecordRef 到 NameComponent，再到现在的大数据自动识别… 看完之后建议看看每年最新的一期，一般都有些新的黑科技。当然如果有去 WWDC 现场不想看 Session，可以在 Lab 直接问 Internationalization &amp; Localization 团队的人有什么新东西（2017 年应该是 stringsdict 模版）。顺便提一下，Route 85 除了上面提到的那一期之外，其他的还是很推荐的。 高效地使用 Metal 看点：实现斯特拉的魔法ED（误） 视频：Session 603: Internationalization Best Practices 建议先学 OpenGL/Metal 再看。 斯特拉的魔法，2016年10月番，ED 的效果很有趣，一直有人常使用各种方法重现。这个视频是讲解 示例代码 的理论，具体该代码模仿 ED 见 av7801365。 WWDC 2015 使用 Xcode 7 进行 UI 测试 看点：用户界面测试竟然是这样写出来的？ 视频：Session 406: UI Testing in Xcode 看完之后觉得 XCUITest 真的是黑科技。顺便提一下，设置accessibilityIdentifier 能够更精准地定位元素，同时 2017 年增加了附件（比如截屏） 的功能。]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>WWDC17</tag>
+        <tag>WWDC</tag>
+        <tag>tips</tag>
+        <tag>WWDC15</tag>
+        <tag>WWDC16</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Tag 迟到的 GitHub Release]]></title>
+    <url>%2F2017%2F08%2F15%2Fgit-tag-github-release%2F</url>
+    <content type="text"><![CDATA[CS193P 翻译了好长的时间了（快四个月了吧，才翻译四集不到？），现在想到通过 release 能够方便通过 RSS 订阅更新，但是 GitHub 只支持最近的几次 commit。怎么办呢？了解了 GitHub 的 release 其实是基于 git 的标签，那就只有先用 git 打 tag，之后再在 GitHub 上根据 tag 生成 release。 创建 tag 1git tag -a &lt;#版本号#&gt; -m "&lt;#信息#&gt;" &lt;#commit#&gt; 如果省略 -m 和参数的话，会让你进入 vim 输入信息的。（:wq 退出） 如果省略最后的提交号的话，会 tag 目前的 HEAD。 同步 tag 打完标签之后，还需要同步到服务器。普通的 git push 是不会同步标签的，需要加个参数： 1git push --tags 当然，如果你只想同步部分 tag（比如打错了？），可以只同步某个 tag: 1git push &lt;#tag 名#&gt; 更详细的使用方法可以参考 Git 基础 - 打标签]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>tips</tag>
+        <tag>git</tag>
+        <tag>CLI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[没有老婆X，机器学习造]]></title>
+    <url>%2F2017%2F08%2F15%2Fgen-scale-tag-anime-girl%2F</url>
+    <content type="text"><![CDATA[不是很懂我们这些二次元的（滑稽），但好东西要分享，方法如下—— 第一步 - 生成 打开 make.girls.moe 等待 “Loading Model…” 结束之后，就可以直接点击 “Generate” 生成了 如果你要自定义配置（Options），看不懂英文，可以用这个翻译一下：https://raw.githubusercontent.com/ApolloZhu/script/master/make.girls.moe.js 第二步 - 放大 虽然官方并不是很推荐，详见讨论 链接 打开 waifu2x.udp.jp 降噪程度 选 最高，放大倍数 选 2x 记住点 “I’m not a robot” 左边的选择框 下载，上传，如此重复放大几次 把最终效果和原图对比一下： 可选 - 打标签 打开 demo.illustration2vec.net 图片上传最开始最小的版本就可以了，然后机器会帮你把老婆分类 等等，好像这是可爱的男孩子 最后，附上三个项目的 GitHub 地址： make.girls.moe, waifu2x, Illustration2Vec]]></content>
+      <categories>
+        <category>瞎捣鼓</category>
+      </categories>
+      <tags>
+        <tag>AI/ML</tag>
+        <tag>anime</tag>
+        <tag>translation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[苹果开发者视频全面上线简体中文字幕]]></title>
+    <url>%2F2017%2F08%2F15%2Fapple-dev-cn-sub%2F</url>
+    <content type="text"><![CDATA[视频包括 WWDC 2017 视频 和 Developer Insight（开发者经验分享视频），其实前些天就陆陆续续在上去了，一开始我以为是机器翻译，但是仔细看才发现不是（当时我还是很惊讶的）。 本文部分转自苹果邮件]]></content>
+      <categories>
+        <category>摘录</category>
+      </categories>
+      <tags>
+        <tag>WWDC17</tag>
+        <tag>WWDC</tag>
+        <tag>translation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[效率提高八倍的方法]]></title>
+    <url>%2F2017%2F08%2F02%2Flast-minute-epf%2F</url>
+    <content type="text"><![CDATA[To Fail to Plan is to Plan to Fail 熟悉我的人大多知道我不玩游戏，却不知道根本原因是有一次差点没做完作业。拖延症估计一直就没治好过，只能说幸好还没到计算我 Credit Rating 的时候，还有机会改正。这次算是一直在 default 这个课程的进度… 一个月的时间本来是很充裕的，硬是变成了 “用四分之三完成四分之一，用四分之一赶完四分之三” 哈哈，deadline 让我的效率提高到了原来的九倍。（滑稽） 还记得不知道谁说过：“时间管理软件只对会管理时间的人有用”。想想也是，必须要有自制力去坚持完成才行。原来一直没有下定过决心，因为放不下对那种美好世界的向往；不过今年 TOEFL, SAT, AP 课程和社团管理还等着我呢，看来是时候和二次元说再见了。 See you later, alligator. 就算我最终还是没能改掉拖延症，至少希望不要学会下面这种神奇的操作：]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>management</tag>
+        <tag>anime</tag>
+        <tag>economics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[为什么这世上没有免费的午餐？]]></title>
+    <url>%2F2017%2F08%2F01%2Fno-free-lunch%2F</url>
+    <content type="text"><![CDATA[There is no such thing as a free lunch 从理论上来讲，任何事情都有 trade-off，权衡取舍。即使别人请你吃了免费的午餐，午餐本身的成本是不用分担的，但是我们还要考虑 opportunity cost，机会成本。你本来可能打算用这段时间干些其他的事情，比如把打赏的按钮加到博客里，说不定有人就已经给你砸了几个硬币。 就算不考虑机会成本，我们可以分析一下现实的状况： 比如上次在车展上，某人登记了个人信息，参加一个据说会抽中某地免费几日游的活动。过了几天，没想到还真有人给她打电话来了。尽管我和我的老师都持怀疑态度，她还是很兴奋地去领奖了。结果发现整个就是旅行社为了推销酒店和旅行计划的套路，就如上面这段文字所描述的那样。 其实就算你只去吃了免费的午餐，对方也是没有亏损的，因为它们得到了你的个人信息。只能希望不会发生 identity theft，身份盗用的问题，要不然为了贪小利就吃了大亏了。]]></content>
+      <categories>
+        <category>摘录</category>
+      </categories>
+      <tags>
+        <tag>translation</tag>
+        <tag>economics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[可不可以跳过汇编，直接学习SWIFT语言？]]></title>
+    <url>%2F2017%2F07%2F27%2Fswift-or-assembly-first%2F</url>
+    <content type="text"><![CDATA[看到知乎上有个很有趣（没有建设性）的问题 —— 可不可以跳过汇编，直接学习SWIFT语言？ 来晚了，只好在这里大声喊出理所当然的答案 —— 不可以！我才买了一本王爽的《汇编语言》 免得被知乎大佬说不求上进 —— 知乎：如何评价 6 岁开始编程的马舜喆？他的前途会如何？]]></content>
+      <categories>
+        <category>摘录</category>
+      </categories>
+      <tags>
+        <tag>WWDC17</tag>
+        <tag>WWDC</tag>
+        <tag>Swift</tag>
+        <tag>zhihu</tag>
+        <tag>Assembly</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[美国梦]]></title>
+    <url>%2F2017%2F07%2F19%2Fthe-american-dream%2F</url>
+    <content type="text"><![CDATA[中国梦博大精深，不可参透，相比之下美国梦就显得有些世俗了： For many people, the American dream means an opportunity to start their own businesses. Economics and Personal Finance]]></content>
+      <categories>
+        <category>摘录</category>
+      </categories>
+      <tags>
+        <tag>translation</tag>
+        <tag>economics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[顾客是上帝]]></title>
+    <url>%2F2017%2F07%2F17%2Fconsumer-sovereignty%2F</url>
+    <content type="text"><![CDATA[看到经济学教材里的 consumer sovereignty 立刻就想到了“顾客是上帝”这句话，虽然更准确意思是顾客是至高无上的，不过应该差不多吧？感觉定义还是很有趣的： To succeed, businesses must produce goods and services that consumers are willing and able to buy. Economics and Personal FinanceDefinition of Consumer Sovereignty 按个人理解，假设客户只是选择购买商品，而没有购买服务（付小费），那个时候应该不算是“上帝”的。不过现实中，客户真要是摆出这句话，怂回去还是显得有些小气了。 题外话，虽然我不信教，不过根据我浅薄的理解，上帝不是替人民受苦受难的吗？]]></content>
+      <categories>
+        <category>摘录</category>
+      </categories>
+      <tags>
+        <tag>translation</tag>
+        <tag>economics</tag>
+        <tag>religion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello!My World!! - Fhána]]></title>
+    <url>%2F2017%2F07%2F17%2Ffhana-hello-my-world%2F</url>
+    <content type="text"><![CDATA[123Map&lt;Creation&gt; hello = /*my*/ new World();// The Java I learned might be a fake one.// 我可能学了假的 Java.]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>music</tag>
+        <tag>anime</tag>
+        <tag>Java</tag>
+        <tag>translation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Swift 和 NS_EXTENSION_UNAVAILABLE]]></title>
+    <url>%2F2017%2F06%2F20%2Fswift-and-ns-extension-unavailable%2F</url>
+    <content type="text"><![CDATA[根据 App Extension Programming Guide，有些 API 在 App Extension 中是不允许调用的，其中最典型的一个就是 UIApplication.shared。这些方法和属性都由 NS_EXTENSION_UNAVAILABLE 这个宏作为标记，在 App Extension 中使用的话 Swift 代码直接无法通过编译（因为程序会直接崩溃），但是因为 Swift 不支持宏定义，所以无法用 #if 来判断是否允许调用。虽然 Swift 中也有类似的 @available，但是因为只是运行时判断，所以并不能解决无法编译的问题。 目前曲线救国的方法有以下三种，不过均未考虑对 Objective-C 的兼容，各位请斟酌后使用。 最简单的方法是把需要用到这些 API 的代码作为 extension 放在另一个文件中，只在非扩展的 target 中包含。 或者是修改工程文件，把 NS_EXTENSION_UNAVAILABLE 加到扩展 target 的 Build Settings 里的 Swift Compiler - Custom Flags 里。这样就能用 #if 判断了。 最后这个方法是在 WWDC17 去 Messages Extension 的 lab 时候想到的，问了下苹果工程师，大概没问题。自己把函数或变量修饰为 @available(...OSAplicationExtension, unavailable)，然后内部通过 Key Path 实现。其它 NS_EXTENSION_UNAVAILABLE 适用的地方尝试调用会因为 @available 无法通过编译，所以只要自己控制好不要在实现的时候乱用就行。完整的例子如下： 12345678910@available(iOSApplicationExtension, unavailable, message: "This is unavailable: Use view controller based solutions where appropriate instead.")@available(macOSApplicationExtension, unavailable, message: "This is unavailable: Use view controller based solutions where appropriate instead.")@available(watchOSApplicationExtension, unavailable, message: "This is unavailable: Use view controller based solutions where appropriate instead.")@available(tvOSApplicationExtension, unavailable, message: "This is unavailable: Use view controller based solutions where appropriate instead.")open func show() &#123; let keyWindow = UIApplication.value(forKeyPath: #keyPath(UIApplication.shared.keyWindow)) show(in: keyWindow as? UIWindow)&#125;open func show(in: UIWindow) &#123; &#125;]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>WWDC17</tag>
+        <tag>WWDC</tag>
+        <tag>tips</tag>
+        <tag>Swift</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[长辈用手机时总寻求子女帮助的原因竟然是？]]></title>
+    <url>%2F2017%2F06%2F15%2Freason-behind-the-elders-whos-trys-out-tech%2F</url>
+    <content type="text"><![CDATA[在知乎上读 AppSo 发布的 《iPhone 就该这样用》，本来以为可以学到点技巧，结果却收获了一个发人深省的观点—— 其实很多时候不是他们不会用，而是他们想接着这些仅有的话题和我们聊上几句话。 把 iPhone 变成「老人机」不难，难的是有耐心陪着长辈说话。 孙润晨十三、如何为长辈设置 iPhone/iPad? 《iPhone 就该这样用》作者：AppSowww.zhihu.com电子书]]></content>
+      <categories>
+        <category>摘录</category>
+      </categories>
+      <tags>
+        <tag>zhihu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[去 WWDC17 的路上]]></title>
+    <url>%2F2017%2F06%2F03%2Fwwdc17-day-before%2F</url>
+    <content type="text"><![CDATA[本文根据记忆补写，可能和实际情况略有出入 一开始的计划是从 IAD 分两段飞到 SJC，然后落地后按地图的指示花 2 美元坐到校园。但还是想着顺便参观下斯坦福校园，所以最后决定直飞 SFO。搭乘早上第一班飞机，坐在经济舱宽敞的皮质座椅上享受着清晨的阳光，十点准时抵达旧金山国际机场。我是预计参加 Stanford 11 点不需要预约的 Walking Tour，但因为 Paypal 绑定失败导致没能坐成 Uber。反正也赶不上了，就索性坐公交车前往吧。 当地交通虽然可以现场现金支付，不过建议先在网上办理 Clipper Card，方便，学生也有优惠（以下价格为优惠前），可以在公交系统附近充值。 SFO -&gt; Stanford，1 小时 11 分钟，$10.15 人生地不熟，旧金山的机场又大结构还复杂，只能靠标示摸索前行。甚至在当地归家心切的留学生都要来问我，我也只能笑着表示无能为力。好不容易找到了可以乘坐 Bart 的 San Francisco Airport Station。在工作人员的指导下在站外的机子上充了卡，但进站之后还是懵了。不过这次不是因为复杂，而是太简单了！标示都没有一个，害得我差点坐反。幸亏机智的我及时问了下旁边的人…… 本来都看了地图做好计划了的，可在 Millbrae 下车之后还是一脸懵逼。跟着人流来刚好到了 Caltrain 上车的地方，却在此之前陷入了往哪个方向坐的问题……正当我纠结的时候，车来了。我之前看的时间表好像说的是这火车还只有上午有，所以这应该算是末班车了，情急之下我随便抓了个人问，他说他问工作人员说就是这辆，我就跟着上了。 你以为这就可以安心了？并不！上去之后发现竟然没有刷卡的地方？？我悄悄问旁边的人，才得知需要在上车之前在某个机器上刷…… 明明是开放式站台啊，加州人民素质太好了吧！不过现在还不是惊讶的时候，得计划好怎么去补票。到了下一站，我提着行李（就算只有一件我也不想把行李丢车上，万一没赶上呢），飞一般地跳下了车。凭着直觉找到了刷卡的小柱子。刷了卡之后又一个冲刺上了车。 终于可以放松一会儿了。车上人不多，还是双层的呢。但是因为提着行李不方便坐，两节车厢之间又很宽敞，就准备站在那里直到下车。列车员看到了，让我还是去找个位置坐，行李我也只能想办法塞到隔壁座位。 到了 Palo Alto Station，有不少人都下了车。下去基本就到斯坦福了，虽然可以在 PATC-University Circle 等坐 SE 线去校园里面，但我还是决定漫步校园。 下车记得 tag off，也就是再刷一次卡，否则会按照你坐到 终点站 算哦。 斯坦福之行 详见 不好意思没写完，之后再来看看吧 😉 Stanford -&gt; Campus Village 2，2 小时，$2 提着行李从游客中心出来之后，沿着热闹的体育场旁边的小路来到了公路边。说实话 EL Camino Real and California 这站存在感太低了，我甚至都怀疑会不会有公交车来。坐上 522 路之后，沿途欣赏了两个小时的风景，最后在 Santa Clara &amp; 6th 站下了车，前往住宿所在的 San Jose State University。 其实我提前下了一个站（能怪我么它那几个站离得那么近），估计可能真的是紧张，完全忘了需不需要提前拉绳子通知司机停车，不过应该 VTA 是不需要 tag off 的。各位要乘坐的话还请和司机确认一下。 未完待续 接下来的内容，请关注 WWDC 系列]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>WWDC17</tag>
+        <tag>WWDC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[A "Good" Letter to Next Years' APCSA Students]]></title>
+    <url>%2F2017%2F05%2F24%2Fletter-to-apcsa-students%2F</url>
+    <content type="text"><![CDATA[This letter was included into the summer packet with minor modifications 12for (Student student : APCSA.future.students) System.out.print("Hello "+ student.name); You’ll learn about computer science and Java here. You won’t be learning about how to write visually attractive programs for the most of the times, but what you learn will empower you to write those programs with ease. This course is the prerequisites for all other CS courses, but why are you taking it? For me, I was here to learn. Despite the fact that I love programming, I’m afraid of computer science, especially those abstract algorithms. To prepare for this course, I read Think Java carefully. Mr. Lau suggested to read the first three chapters, I read it entirely. You can download it on your phone, and read it whenever you take your phone out. You don’t need a full time period, except for the exercises at the end of each chapter. You might find yourself unable to complete the exercise questions like me; if you do, just go back and read about that part again. There are no preferred answers to those questions, so any code that generates the same result are correct. But if you ever wonder, mine is on GitHub. Even with a significant amount of knowledge about programming, you can always find something new here, so don’t just assume you are omniscient. Java is advanced but primitive, stern but nonchalant, expressive yet confusing. Learning Java is like learning a foreign language, you have to practice using it. Thus, I strongly recommend starting the labs early. Similar to those exercises included in Think Java, there are no standard ways to implement them. Therefore, explain to your tutor how you choose to complete the task, don’t let them type the code for you. And you never want your friend to show you their program; it will limit your imagination. This course requires you to think logically, trace what’s going on. It is a frustrating process, but the good news is, you have a lot of resources. You can ask questions in class, take notes on or annotate important concepts for review. Another option is coming to Mr. Lau’s cougar time. You’ll find a comfortable environment for studying computer science. If you have any questions, you can always ask Mr. Lau or students around you. A lot of “good” students and center tutors come on daily bases. They will always help you IFF you ask. Or join Oakton Computer Science Club, you’ll find many opportunities to practice what you learned in this course, and meet with some really advanced students. You can be a good student too. It’s very simple: understand what you are doing. Never use a code snippet until you can write it and its variations out without any assistance. I’m definitely talking about plagiarism, but that’s not my focus. I want to emphasis on the importance of solving problems by yourself. If you can’t visualize the process in your head, draw a graph, a table, or a stack to visualize the flow of your program. If your program doesn’t compile, read the error messages. A lot of them doesn’t make any sense to you (and me), but you’ll find the culprit through these traces. If you have a logic error, try break points. They are very easy to learn and convenient to use. You’ll find them handy. Other than understanding how it works, you need to know why it works. You can achieve this by reading the source code of Java. Written by top developers in the world, Java source code demonstrates the conventions of writing Java code. You can compare your own solutions to theirs, and ask yourself what’s the difference. With a lot of documentations and comments, you can figure out why they choose to do it that way. Of course I’m not asking you to read all 2 billion lines of Java code, that’s neither necessary nor efficient. When Mr. Lau tell you “this is not natural,” it is a good place to start. If you have a professional IDE like Eclipse, just ctrl/command click on that method or class; otherwise, find it in the JAVA_HOME directory. A quick note for those “good” students. You may use “advanced” stuff – such as regular expressions and lambdas – in your lab. That’s what people use in real life, but make sure you know how to complete the tasks without those language features, fancy methods, and classes. Remember: ALL are equal before computer science; (to be) || !(to be), that is true. @ApolloZhu 2017/5/24]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>English</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2017 ACSL All-Star Contest]]></title>
+    <url>%2F2017%2F05%2F18%2Facsl17-all-star-contest%2F</url>
+    <content type="text"><![CDATA[没想到在六月份去 WWDC 之前，5/27 号我还要先飞洛杉矶参加 ACSL All-Star Contest。 因为学校放假，社团组织略有疏忽，指导教师的邮箱把主办方发来的通知标为了垃圾邮件，等到我们组里一个比较看重这个比赛的同学注意到不对劲去问的时候，我们只剩下一周左右的时间。虽然官方推荐的酒店已经订满了，租车的优惠也没了，但是既然都进了决赛（后来才知道这也是我们社团第一次进决赛），哪有不去的道理？ 按道理来说，因为是通过学校社团报的名，这个应该属于学校活动。需要先让老师完成填写 REQUEST FOR APPROVAL OF UNUSUAL FIELD TRIP，并提供一个比较详细的日程表。经过学校各级领导签字批准过后，家长再在 PARENTAL AUTHORIZATION AND ACKNOWLEDGEMENT OF RISK FOR FIELD TRIP 上签字，连着 EMERGENCY CARE INFORMATION 和支票一起交给学校，由学校的账户统一支付。就算 Activity Office 的 Ms. Jay 说会帮我们盯着，但这个过程下来肯定是赶不上的。而且 Mr. Lau 和 Mr. Larson 都没空当 Chaperone，学校也不认同家长代替，这事就只好私了了。 5 月 26 日，星期五 今天本来只上半天课，但因为化学有个单元测试，航班又在傍晚，就没准逃课的。结果家长们商量好了让我们聚在一起集训一天，顺势请了个病假，稍微发了个邮件告诉 Mr. Lau 不要担心（Mr. Lau，我有多喝热水哦）。星期四看算法竞赛入门到凌晨一点，早上九点再到 Justin 家继续看各种资料复习准备。不过感觉大家都不是很投入的样子——有怀抱宠物呼呼大睡的，有玩游戏翻漫画的，有追番到胃疼的（原谅真美这集堪比好想急死你）。 下午三点出发到 IAD 乘机，因为 UA 没有柜台，拿着打印的电子机票就直接过安检进去了。没想到国内航班的 D 航站楼和国际相比差远了，连座位都不够，整体显得很拥挤。到了 D23 登机口换了 UA719 的登机牌，坐在地上等了半个小时。因为是国内航班，即使有五个小时，还是在饭点，却依然没有正餐，只有一小包饼干和饮料。即使是坐第一排 7E，也许因为是 737-800 吧，第一次体会到了为什么会有人需要买靠枕 —— 座位的设计绝对没考虑人体工程学。 洛杉矶 洛杉矶时差三个小时，到的时候是晚上八点。出了机场，到外面有紫色牌子（Rental Car Shuttles）的地方等 Hertz 的黄色 shuttle. 酒店其实没有想象的远，也有可能是 LA 大家开车速度很快，四十分钟左右就到了。晚饭在酒店旁边 The Oaks 连锁（误） 商场的 Chess Factory 吃的，开胃菜 + 每人一份主食 + 招牌起司蛋糕总共大约 $130 左右，分量很大，大家都没吃完。住的 La Quinta Inn &amp; Suites Thousand Oaks Newbury Park 酒店整体感觉很好，Wi-Fi 也不慢，只不过和其他美国酒店一样没有洗漱套装。 5 月 27 日，星期六 早上六点起床，本来准备七点准时去会场 Newbury Park HS，结果酒店七点才开始供应早餐。早餐有面包，饮料，燕麦，还可以自己烤华夫饼，简单吃了一下，收拾整理，八点左右到了会场。带队“老师”到体育馆中间的桌子交 $200 报名费，领取奖牌，优惠券，日程安排和午餐券。组织者八点半准时开始说明规则，四十五的时候让学生代表去领题目，其余的队员去找教室，家长老师去特定的休息室。 编程题目有一定的困难，但还是属于可以完成的范畴。中途在测试的时候输入的数据没选好，把电脑卡死了，然后就陷入了两小时和电脑的苦战。虽然依然在想算法，但其实把算法转成代码还是没那么容易。有一道题算是完成了，但是有些小瑕疵；有一道题本来都完成了，但是因为 IDE 的问题，完成的版本被删除了（早知道就让他们先把这道题过了再说），只留下了原来一个快完成的版本。剩下两道时间不够，没能实现…十二点半交卷，想方设法请求监考老师再给我们点时间，未果，郁郁寡欢地吃了两块披萨，就去考笔试了。虽然全部都是选择题，但是有一个可恶的选项 E —— 以上皆不是。虽然基础都掌握了，但是因为题目本身很复杂，结果也只得了一半的分。 观光 其他不说，学校整个感觉就是地广人稀 —— 高中完全给人一种大学的感觉，竟然还配备了一个游泳池。考虑到多半不会得奖，就没等到四点，两点半考完就开始往洛杉矶走，准备路上去好莱坞看看。志性的 HOLLYWOOD 只瞥见了一眼，主要还是在城镇里和富人区开车转了一遍。印象最深的是某个建筑外墙上的彩绘，和路边满树的紫色小花（原谅我无知）。晚餐本来准备在鼎泰丰吃，不出所料地要等很长时间，就在旁边 Granville 吃了，价格还算人道。 回程 大家好像不想久留，即使星期一因为 Memorial Day 放假，还是迫不及待地坐星期六晚上 21:51 的 UA784 赶回来。回来路上给车加了油，还回 Hertz，坐摆渡车到了候机楼。星期天早上迎着朝阳回到 IAD，各自回家睡了一天懒觉。 账务估计 项目 金额 机票 2569.60 酒店 369.58 租车 35.52 报名 200 餐食 ?? 总计 3164.7 平坦 1070 致谢 感谢 Justin 的妈妈及时给 Mr. Lau 发了封邮件说明情况。我相信没有她的帮助，就没有我们这次的旅程。以下是原文节选： Justin told me over the weekend that their group (Nithin Jonnalagadda, Zhiyu Zhu and Justin Li) has the opportunity to participate in this year’s ACSL All-Star Contest in southern California on May 27. I am very excited for them, and I think this is a very good experience for them to participate the activities outside school and see other students who share the same interest and passion with them from all over the country. My husband will be happy to be the chaperone. I have already purchased the air tickets for the four of them, reserved the hotel rooms, and rented a car last night. I would like to know if there is anything else that needs to be done to participate in this event to represent Oakton High School (like certain forms, school permissions, etc.). Last, I would like to thank you for acting as the group’s mentor and guiding them for the past two years. I am pretty sure they would not have been able to make it without your help. Looking forward to what these boys can achieve as they continue on! Justin's MomAn Email to Mr. Lau 感谢 Mr. Lau 为我们积极沟通联系，以及平常上课时的认真负责。这次还真被他说中了，真没得奖。 另外感谢主办方代表 Mr. Tebrow 在我们不代表学校的情况下网开一面；感谢 Mr. Kick 及时告诉我们时间表。]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>ACSL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Exam Appendix -- Java Quick Reference]]></title>
+    <url>%2F2017%2F05%2F02%2Fapcsa-appendix-b%2F</url>
+    <content type="text"><![CDATA[Accessible methods from the Java library that may be included on the exam 1234class java.lang.Object &#123; boolean equals(Object other); String toString();&#125; 12345678class java.lang.Integer &#123; Integer(int value); int intValue(); /** Minimum value represented by an `int` or `Integer`. */ static int MIN_VALUE; /** Maximum value represented by an `int` or `Integer`. */ static int MAX_VALUE;&#125; 1234class java.lang.Double &#123; Double(double value); double doubleValue();&#125; 1234567891011class java.lang.String implements java.lang.Comparable&lt;String&gt; &#123; int length(); /** @return the substring beginning at `from` and ending at `to-1`. Note: the substring has length of `to - from`. */ String substring(int from, int to); /** @return `substring(from, length())`. */ String substring(int from); /** @return the index of the first occurrence of `str`; -1 if not found. */ int indexOf(String str); /** @return value &lt; 0 if `this` less than `other`; 0 if equals to `other`; &gt; 0 if greater than `other`. Note: According to ACSII. */ int compareTo(String other);&#125; 1234567class java.lang.Math &#123; static int abs(int x); static double abs(double x); static double pow(double base, double exponent); static double sqrt(double x); static double random();&#125; 123456789101112interface java.util.List&lt;E&gt; &#123; int size(); /** Appends obj to end of list. @return `true` Note: only if operation allowed, such as always true for `ArrayList`. */ boolean add(E obj); /** Inserts `obj` at position `index`, for 0 ≤ `index` ≤ `size()`. */ void add(int index, E obj) E get(int index); /** Replaces the element at position `index` with `obj`. @return the element formerly at the specified position. */ E set(int index, E obj); /** Removes element from position `index`, moving elements at position `index + 1` and higher to the left by 1 (subtracts 1 from their indices) and adjusts size. @return the element formerly at the specified position. */ E remove(int index);&#125; 1class java.util.ArrayList&lt;E&gt; implements java.util.List&lt;E&gt; &#123; &#125;]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>English</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WWDC17 准备记录]]></title>
+    <url>%2F2017%2F04%2F23%2Fwwdc17-preparation%2F</url>
+    <content type="text"><![CDATA[今年被选为了 Scholar，记录一下各种事宜，方便下次（如果还有的话）参考。没选中的同学们再接再厉，明年还有机会。我觉得最好不要像这个同学这样在论坛里发牢骚和冷嘲热讽还不提供证据，终究只会给苹果留下坏印象，偷鸡不成蚀把米。 公开宣布 得奖了当然是要到各个平台宣传啊！这样说不定能正好找到一起去的小伙伴呢，比如今年就建了一个 “WWDC2017中国春游团”。 QQ 说说 微信朋友圈 Facebook 微博 #WWDC# Twitter #WWDCScholars #WWDC17 通报学校，互惠共赢 接受奖项 公布结果那天（4/22）有空就在刷邮件，然后就看到了 点 Accept Your Scholarship，会跳到苹果开发者官网，然后全选 Yes。最后 Optional 的那个应该是某个报刊杂志的采访吧，官网也不好看，没勾。 更具你接受的时间，这个神奇的 Events Tab 出现时机也不同。我是晚了一个小时，结果等了两天。其实这个票也就是看着安心，因为现在你并不能对它做什么。 行程计划 完了之后苹果会再来一封邮件，包含了住宿信息，这个时候就可以开始计划了。今年（2017）是在 San Jose State University Campus Village 2，6月3日入住，6月10日退房。附近的机场可以参考苹果的旅行建议，但是机票和到达之后到宿舍的过程就需要自己计划了。虽然也可以申请 travel assistant，让苹果付钱，不过这个机会还是给更需要帮助的人吧。 群里正好遇到一个同在 VA 的同志，他准备从 BWI 飞 OAK。便宜是便宜，100 多美金，但是我看是下午的航班，五点半到，之后再是两个小时的 Bart，而且我这边早上也要先去巴尔的摩，觉得有些麻烦，很遗憾不能通行。但也因此我才发现 Google 机票查询支持多个机场同时考虑，重新制定了计划。 目前大致计划如下，早上七点过 Virgin 的航班从 IAD 飞 SFO，十点过到了之后去 Stanford 逛一圈，之后再去宿舍。之前有幸认识到了一个斯坦福的学生，刚刚发了邮件，正在等待回复来决定最后的计划。[5/23 更新]：斯坦福好像把外部的邮箱都屏蔽了… 航空公司 航班号 时间 价格 Virgin VX67 7:20-10:05 228.2 American UA517 14:55-23:05 265.2 Badge 5/23 发了一封邮件链接到 Get Ready for WWDC. 这个页面上可以更改挂牌上面的名字（昵称）和填写应急联系人的信息。 家长许可 针对未成年人有个特殊要求，就是家长需要签署的 WWDC 2017 Permission Statement。论坛里也有人在问，结果也没人回答，最后 5/18 号左右才开始打电话。我可能手机关机没接上，苹果直接给家长打过去了。主要就是问问家长去不去，为什么，不去的话让家长放心一类的。最后说要发封邮件，等到 25 号才来。主要就是填个紧急联系信息，同意 “出了事苹果不负责，熊孩子搞事请走人” 的条款。 最后确认 开会前的周二伴随着新版的 WWDC App，苹果发来了通知书，再次强调了些重要的事项。这个时候就可以把 Badge 添加到 Wallet 里了。周四旅行社发来邮件，要家长和我同意各种事项，把签好字的发回去。 未完待续 接下来的内容，请关注 WWDC 系列 常见问题 没收到确认邮件？ 检查垃圾邮件 如果开发者账号是 iCloud 账号，到苹果开发者官网去领（这是个 Bug） 发邮件问苹果什么情况 我之前抽奖买的票怎么办？ 听别人说可以退，发邮件给苹果说明情况，会帮你解决的。当然也有人选择给女朋友（当然你要先有一个女朋友）。虽然一般来说是不能转让的，比如奖学金的票就肯定不能转，但是苹果允许在通知它以后把自己买的票在团队里用。 Tickets may not be sold, resold, bartered, auctioned, or transferred in any way. As an exception to the foregoing, requests to transfer tickets among eligible members of the same team may be submitted to Apple for consideration at wwdc@apple.com. Apple reserves the right to reject any transfer requests. AppleWWDC 2017 Registration and Attendance Policy Xcode 8.3 的 Bug 就是在交稿之前发布的新版本，偏偏 Playground 出了问题，论坛赶紧发布补救措施]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>WWDC17</tag>
+        <tag>WWDC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WWDC17 奖学金项目]]></title>
+    <url>%2F2017%2F04%2F03%2Fwwdc17-scholarship%2F</url>
+    <content type="text"><![CDATA[老实交代，真的是最后几分钟交上去的，紧张的不得了。提交的时候还出了错，让重新登录账号，重新输入信息。那个时候整个人都是慌的，成功提交完了之后人都还在发抖。最后竟然选中了，算是了却了个多年（那个，你又没活那么久）的心愿吧，欣喜如狂。 看到 WWDC 的新闻出来了，马上就去看今年 Scholarship 的题目。本来都觉得自己没什么好 App 不准备参加的，结果今年苹果不按套路出牌，不交 app，交 playground。想起来之前有个没有完全实现的 Swifty Karel 可以用，正好 playground 还能帮我解决编译的问题。 Karel 是斯坦福 CS106A 课程很早开始就用来引导学生学习 Java 的工具，Karel the Robot Learns Java 一书中有比较全面的介绍。感觉和 Swift Playgrounds 教程几乎没有区别；唯一区别就是，一个是萌萌哒的 3D，一个是像素风的 2D。 改进 最后因为时间不够了，其实交上去的 playground 并不算美观，除非 Apple（让我）继续改进，就算选中也不可能拿去展示。我们先来定个小目标，列个改进清单： [x] 基本函数介绍 [x] Playground.current 的配置 [x] 自定义 ColorScheme [x] Playground.current 的导出 [x] 首页 &quot;Hello WWDC17&quot; [x] 斯坦福 pdf 里的案例 [ ] TOC，页眉页脚，LICENSE [ ] README 忏悔 因为对 SpriteKit 一点也不熟悉，只好用 UIView 和 Timer 来搞动画。其实如果有空可以熟悉一下游戏引擎。之前因为宣誓尽量不开发游戏，加上尝试 SpriteKit 受挫，基本就没动过。现在看来游戏引擎也不是只能开发游戏，还能作为一种展示 UI 的手段。不过改为用 SpriteKit 实现只怕是劳神费力，除非有什么要紧的 bug，否则多半是不会考虑的。 说实话现在还有个不怎么起眼的 bug。因为乱用 Singleton，导致现在 WorldModel 不走 liveView 都展示不出 Karel 来。希望能在写 README 之前解决这个问题。 致谢 谢谢初中的徐喜元老师当年破例让我在 NOIP 竞赛班旁听；谢谢老司机 JD 同学领我入门，时刻激励着我不断学习；谢谢父母对我编程的支持；感谢所有英语老师给我这一切的基础。最后我还希望感谢蔡昕老师，是他的话语时刻警醒着我不能做“留洋的泡沫”，同时这里也希望请他原谅我的不告而别。]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>WWDC17</tag>
+        <tag>WWDC</tag>
+        <tag>Swift</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[近血亲，越血腥]]></title>
+    <url>%2F2017%2F03%2F24%2Fbloody-blood%2F</url>
+    <content type="text"><![CDATA[The near in blood, the nearer bloody. William ShakespeareMacbeth]]></content>
+      <categories>
+        <category>摘录</category>
+      </categories>
+      <tags>
+        <tag>literature</tag>
+        <tag>translation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[笑里藏刀]]></title>
+    <url>%2F2017%2F03%2F24%2Fdaggers-in-smiles%2F</url>
+    <content type="text"><![CDATA[There’s daggers in men’s smiles. William ShakespeareMacbeth]]></content>
+      <categories>
+        <category>摘录</category>
+      </categories>
+      <tags>
+        <tag>literature</tag>
+        <tag>translation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[macOS 下编译Synergy]]></title>
+    <url>%2F2017%2F03%2F23%2Fbuilding-synergy%2F</url>
+    <content type="text"><![CDATA[Synergy 是一款跨平台多电脑共享一套鼠标键盘的利器，可惜正常下载要收费。曾经有段时间可以免费下内测版，但是现在也不行了。不过作为开源软件，我们可以自己编译。此编译指南应该适用于 macOS 10.10 及以上，但是***就算编译正常，还是什么都显示不出来***。 安装依赖 安装 Homebrew 从 Mac App Store 下载 Xcode 打开 Xcode, 选择菜单栏中的 Xcode &gt; Preferences &gt; Locations 在 Command Line Tools 中选择一个版本 安装 cmake, qt5 12brew install cmakebrew install qt5 编译 下载 synergy 1git clone https://github.com/symless/synergy.git;cd synergy 修正 ext/toolchain/commands1.py 文件中的 bug 和 bug 1234sed -i "" "s:frameworkRootDir = .*$:frameworkRootDir = \"$(which qmake | sed "s/bin.*$/Frameworks/")\":" ext/toolchain/commands1.pysed -i "" "s:Contents/Info.plist:Resources/Info.plist:" ext/toolchain/commands1.pysed -i "" "/self.move/d" ext/toolchain/commands1.py 配置参数 1./hm.sh conf -g2 --mac-sdk $(sw_vers -productVersion | sed 's/.\d*.$//') --mac-identity test 编译 1./hm.sh build 移动到 Applications 文件夹 1mv bin/Release/Synergy.app /Applications/Synergy.app 删除原文件 1cd ..;rm -rf synergy 参考 Synergy compile instructions]]></content>
+      <categories>
+        <category>瞎捣鼓</category>
+      </categories>
+      <tags>
+        <tag>tips</tag>
+        <tag>macOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[排序算法]]></title>
+    <url>%2F2017%2F03%2F20%2Fsorting-algorithm%2F</url>
+    <content type="text"><![CDATA[目前包括：选择排序，插入排序，归并排序 情景：将数组 a 中的 nnn 个整数从小到大排序 123456int[] a;void swap(int[] a, int i, int j) &#123; int temp = a[i]; a[i] = a[j]; a[j] = temp;&#125; 选择排序 比较次数：n(n−1)2\frac{n(n-1)}{2}2n(n−1)​ 时间复杂度：O(n2)O(n^2)O(n2) 选择最小 1234567for (int i=0;i&lt;a.length-1;i++) &#123; int minIndex = i; for (int j=i+1;j&lt;a.length;j++) if (a[j] &lt; a[minIndex]) minIndex = j; swap(a, minIndex, i);&#125; 选择最大 1234567for (int i=0;i&lt;a.length-1;i++) &#123; int maxIndex = i; for (int j=0;j&lt;a.length-i;j++) if (a[j] &gt; a[maxIndex]) maxIndex = j; swap(a, maxIndex, i);&#125; 插入排序 时间复杂度：O(n2)O(n^2)O(n2) 123456for (int i=1;i&lt;a.length;i++) &#123; int cur = a[i], newIdx = i; while (newIdx &gt; 0 &amp;&amp; a[newIdx-1] &gt; cur) a[newIdx] = a[--newIdx]; a[newIdx] = cur;&#125; 归并排序 时间复杂度：O(nlogn)O(n\,logn)O(nlogn) 123456789101112131415161718192021222324void mergeSort(int[] a) &#123; mergeSort(a, 0, a.length-1);&#125;void mergeSort(int[] a, int start, int end) &#123; if (start &gt;= end) return; int mid = (start+end)/2, i = start, j = mid+1, len = end-start+1, temp[] = new int[len]; mergeSort(a, i, mid); mergeSort(a, j, end); for (int k=0;k&lt;len;k++) if (j&gt;end || i&lt;=mid &amp;&amp; a[i]&lt;a[j]) temp[k] = a[i++]; else temp[k] = a[j++]; for (int k=0;k&lt;len;k++) a[start+k] = temp[k];&#125;]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>algorithm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[APCSA 易错点整理]]></title>
+    <url>%2F2017%2F03%2F20%2Fapcsa-traps%2F</url>
+    <content type="text"><![CDATA[本文不定期更新，预计 2017/5/2 停更 此文只包含对于本人来说死记硬背能提升做题速度的知识点，所有写过的代码见 APCSA 测试 Q: A large Java program was tested extensively, and no errors were found. What can be concluded? A: The program may have bugs. Even after you tested – values from each range all boundary values values outside boundaries 读完 pre/post-condition 这个要是读漏或者读错整个题都会错啊！而且很多时候可以简化代码，不用考虑那么全面。 不要杞人忧天 如果你是个非要用空格或是制表符的强迫症患者，这条一定要记住。对于我们这些完美主义者，就算题目给出的答案明显不可能完美地实现，但只要题目中说了 “implemented correctly”，请睁一只眼闭一只眼，千万不要和 College Board 计较。 整数除法 1System.out.print(3/4); // 1 四舍五入 强转 int 直接 truncate 小数部分，不分正负 123int round(double num) &#123; return (int)(num + (num &gt; 0 ? .5 : -.5));&#125; 常识 请在答案中使用这个函数的 flag 12public aMethod()&#123; /* implementation not shown */ &#125; 随机数 Math.random() 返回 [0,1) 任一 double 1234567E pick(E[] array) &#123; return array[(int)(Math.random()*array.length)];&#125;E pick(List&lt;E&gt; list) &#123; return list.get((int)(Math.random()*list.size()));&#125; start - end 之间随机整数 123int random(int start, int end, boolean includeEnd) &#123; return (int)(Math.random()*(end-start+(includeEnd?1:0))+start);&#125;]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>tips</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Bilibili 和 网易云音乐的正确使用方法]]></title>
+    <url>%2F2017%2F03%2F19%2Fbilibili-netease-relationship%2F</url>
+    <content type="text"><![CDATA[然而现在的情况是：我用网易云音乐找番，用bilibili找歌-_-||]]></content>
+      <categories>
+        <category>摘录</category>
+      </categories>
+      <tags>
+        <tag>music</tag>
+        <tag>anime</tag>
+        <tag>bilibili</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[macOS 重定向域名到 Hexo 本地服务器]]></title>
+    <url>%2F2017%2F03%2F18%2Fredirecting-domain-to-local-hexo-server-on-macOS%2F</url>
+    <content type="text"><![CDATA[每次把网站截屏发朋友圈，被别人发现地址栏是 localhost:4000，稍微觉得有点 low。也是，怎么也得展示个像样点的域名吧。所以在网上查了查，整理收集如下。我对网络基本不了解，望各位路过的大神们指点一二。 修改 hosts 假设我们很有逼格的域名是 example.com 通过 /etc/hosts 把 example.com 映射到 10.0.0.1 110.0.0.1 example.com 配置 一下步骤每次重启都要再执行一遍 在回环接口（loopback interface）新建一个地址，10.0.0.1 1sudo ifconfig lo0 alias 10.0.0.1 -e 启动防火墙（Packet Filter），-f 载入后面的规则 —— 将所有到 10.0.0.1:80（HTTP 默认端口）的连接转发到 127.0.0.1:4000（hexo 默认本地服务器地址） 1echo "rdr pass on lo0 inet proto tcp from any to 10.0.0.1 port 80 -&gt; 127.0.0.1 port 4000" | sudo pfctl -ef - 完成，现在可以在浏览器中输入 example.com 来代替了！ 还原 重启电脑，或是 删除新建的地址，重置防火墙，清空本地 DNS 缓存 123sudo ifconfig lo0 -alias 10.0.0.1sudo pfctl -F all -f /etc/pf.confdscacheutil -flushcache 参考 iptables equivalent for mac os x - StackExchange]]></content>
+      <categories>
+        <category>瞎捣鼓</category>
+      </categories>
+      <tags>
+        <tag>tips</tag>
+        <tag>macOS</tag>
+        <tag>server</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Yearglass／年轮项目]]></title>
+    <url>%2F2017%2F03%2F06%2Fyearglass-project%2F</url>
+    <content type="text"><![CDATA[愿能为君，暂留光阴 const today = new Date(); const year = today.getFullYear(); const thisYear = new Date(year, 0, 1); const nextYear = new Date(year + 1, 0, 1); const oneDay = today.getMilliseconds(); const passed = Math.floor((today - thisYear) / oneDay); const total = Math.floor((nextYear - thisYear) / oneDay); const percentage = passed / total; const space = 15; function repeat(s, n) { return new Array(Math.floor(n + 1)).join(s); } document.getElementById("yearglass-web").innerHTML = year + " 年已过去 " + Math.floor(percentage * 100) + "% [" + repeat("▇", space * percentage) + repeat("\\\\", space * (1 - percentage)) + "]"; For the English Version of this documentation, please visit: yearglass 在即刻／微博／推特上看到一个有趣的提醒，year_progress，总的来说就是显示今年过去了的百分比。于是顺手就用 Swift 实现了一个终端的小程序：年轮。发布的时候 2017 年才过去 17% 呢。 基本 下载 1git clone https://github.com/ApolloZhu/yearglass.git 更新 1cd yearglass;git pull;cd .. 卸载 卸载完成后还需手动删除配置，请参考下文。 1rm -rf yearglass Terminal 配置 加入到终端启动列表 1echo "swift ~/yearglass/main.swift" &gt;&gt; .bash_profile 注册 yearglass 命令 1echo "alias yearglass='swift ~/yearglass/main.swift'" &gt;&gt; .bash_profile 删除配置 1sed -i '' '/swift .*yearglass.main.swift/d' .bash_profile Oh My Zsh 配置 本人并不了解 zsh 怎么用，如有疏漏还请大家指正。 加入到终端启动列表 1echo "swift ~/yearglass/main.swift" &gt;&gt; .zshrc 注册 yearglass 命令 1echo "alias yearglass='swift ~/yearglass/main.swift'" &gt;&gt; .zshrc 删除配置 1sed -i '' '/swift .*yearglass.main.swift/d' .zshrc]]></content>
+      <categories>
+        <category>瞎捣鼓</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+        <tag>macOS</tag>
+        <tag>CLI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[在 Swift 工程中使用 OpenGL 框架 GLFW 的配置过程]]></title>
+    <url>%2F2016%2F11%2F14%2Fconfiguring-glfw-for-Swift-in-Xcode%2F</url>
+    <content type="text"><![CDATA[当初想要学 OpenGL，找到了一个使用 Swift 语言的教程 —— SwiftGL，主要内容是使用 Swift 3 在 macOS Sierra (10.12) 上开发基于 glfw3 的 GUI 程序（虽然是通过命令行调起的）。可惜最后还是没能坚持下来，但当时摸爬滚打，翻了不少博客，甚至还差点把 SwiftGL 的库用 Swift 3 重写，最后才研究出来的出来的配置方法丢了就太可惜了，特此记录分享。 编译 glfw 下载 GitHub 上的 glfw，解压 打开 CMake App 准备编译 Browse Source 选择 glfw-master Browse Build 随便选择一个临时的文件夹 点击 Configure, 从 generator 的下拉列表中的选择 Xcode，点击 Done CMake 处理完（Configuring done）之后再点一遍 Configure 点击 Generate，点击 Open Project Xcode 中把 Scheme 换为 install，编译并运行 配置工程 完成之后，打开自己的工程文件。 以下操作每个工程只需要 一次。加入的文件可以在 Target 之间共享。 打开 Finder, Shift+Command+G，输入 /usr/local/lib/libglfw3.a，确认 把文件拖进工程 copy items if needed create groups 添加 针对每个工程中每个需要 glfw 的 Target，都需要 完成下面的步骤。 切换到 Build Settings，搜索 sea 把 /usr/local/include 添加到 Header Search Paths 把 /usr/local/lib 添加到 Library Search Paths 如果没有桥接头文件（Bridging Header），创建一个 把以下内容添加到桥接头文件中 123#include &lt;GLFW/glfw3.h&gt;#include &lt;GLFW/glfw3native.h&gt;#include &lt;GLKit/GLKit.h&gt; glfw 配置完毕，享受你 Swifty 的 OpenGL 之旅吧。]]></content>
+      <categories>
+        <category>瞎捣鼓</category>
+      </categories>
+      <tags>
+        <tag>tips</tag>
+        <tag>Swift</tag>
+        <tag>macOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[从坏掉的 Mac 中备份数据]]></title>
+    <url>%2F2016%2F04%2F10%2Fbackup-dead-mac%2F</url>
+    <content type="text"><![CDATA[看到这篇文章的你，请以后记得使用 TimeMachine。然后，只要你的硬盘没有被砸坏一类的，数据还能访问，我这个方法你都可以试试 要是你对我的电脑出了啥问题感兴趣的话，可以展开来看看，否则就不耽误你时间了。 我 Boot Camp 分区完准备装 Windows，但不知道为啥失败了，新建的分区还删不掉，所以我决定自己把 Windows 分区删了重新试一遍。这下好了，还是通过 Boot Camp 把镜像写到 32G U盘来安装 Windows，但就打死都不能分区；尝试我自己使用磁盘工具分区，它就提示说错误代码 8。那我就想，会不会安全模式能解决问题？心理窃喜，按住 shift 开机，可还没有显示登录界面就直接黑了。没办法，command + R 进恢复模式修复磁盘，结果它也没辙。恰巧遇到 Genius Bar 偷懒（昨天最晚就开到 17:15，今天不上班），只好开始各种搜索。最后找到了用 FireWire 连接的方法，但关键是哪里又第二台 Mac…… 电脑可以换，数据不能丢！仗着还能访问里面的文件，我决定靠自己捣鼓。 未来的我：你以后还会把硬盘各种玩坏，把修复过程记下来算是还有自知之明。 目标磁盘模式 如果你能找到另一台 Mac 的话，恭喜你，你只需要再有一条 FireWire/Thunderbolt/USB-C 的线就可以快速地把数据导出了！连接好两台 Mac，并在你坏掉的电脑开机时按住 T 键，就会发现它作为普通的硬盘显示到另一台 Mac 上了！ 单用户模式 我默认为你已经看过了 其他抢救措施，正如那里面所说的，开机时同时按住 command 和 S 键进入单用户模式，等待满屏飞过奇怪的代码。 之后我们将开始敲命令。如果不小心执行了奇怪的命令，你可以通过按下 control 和 C 键来终止该命令。 驱动 USB 在插入U盘之前，我们先先确认已经存在的磁盘。输入： 1ls -l /dev/disk* 你会看到例如这样的输出： 123disk0disk0s1disk0s2 接着我们插入 USB 设备然后再输入一次 1ls -l /dev/disk* 就可以看到多出来的磁盘了： 12345disk0disk0s1disk0s2disk1disk1s1 上面的例子中，disk1s1 就是我们的 USB 设备。 但我这里什么都没有多出来啊？ 我没试过，不过可以尝试下网络上提到的方法。一条条输入下面的命令，直到出现为止： 12345launchctl load /System/Library/LaunchDaemon/com.apple.disk*launchctl load /System/Library/LaunchDaemon/com.apple.kextd.plistlaunchctl load /System/Library/LaunchDaemon/com.apple.notifyd.plistlaunchctl load /System/Library/LaunchDaemon/com.apple.configd.plistlaunchctl load /System/Library/LaunchDaemon/com.apple.DirectoryServices.plist 装载 USB 设备 接下来我们确认 USB 设备类型。如果按上面的例子 disk1s1，我们输入： 1fstyp /dev/disk1s1 我这里输出的是: 1msdos 你可能会不一样，不过没有关系，先启用读写模式然后创建临时文件夹。输入： 12mount -uw/mkdir /az 接着把 USB 设备装载到 az 这个临时文件夹里。如果按上面例子的 disk1s1 和 msdos，输入 1mount -t msdos /dev/disk1s1 /az 复制文件夹 注意如果文件夹名字里面有空格，要在空格前面加一个反斜杠（\） 输入 cp -pr 源文件夹 /az/ 就可以把它拷贝到 USB 设备上了。举个例子，我们把桌面复制过来： 1cp -pr /Users/你的用户名/Desktop /az/ 如果你不知道文件在什么地方的话，输入 ls 会显示当前目录下所有的文件和文件夹，cd 文件夹名 可以进入那个文件夹，cd .. 可以返回上级文件夹。你还可以试着按 tab 键，它可能会帮你自动补全文件的名称。 要创建 zip 压缩包的话通过输入 zip -rX 文件名.zip 要压缩的文件夹 收工 推出磁盘并关机。输入： 12umount /az/shutdown -r now 最后祝您身体健康。]]></content>
+      <categories>
+        <category>瞎捣鼓</category>
+      </categories>
+      <tags>
+        <tag>tips</tag>
+        <tag>macOS</tag>
+      </tags>
+  </entry>
+</search>
